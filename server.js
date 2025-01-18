@@ -1,5 +1,7 @@
 import express from 'express';
 import dotenv from 'dotenv';
+import helmet from 'helmet';
+import cors from 'cors';
 
 // Create Web App
 const server = express();
@@ -11,6 +13,12 @@ server.set("view engine", "ejs");
 server.use(express.static("public"));
 server.use(express.urlencoded({extended: true}));
 server.use(express.json());
+
+// Middleware for web security
+server.use(helmet());
+
+//Middleware for cross-origin resources
+server.use(cors())
 
 // Configure .env file
 dotenv.config();
