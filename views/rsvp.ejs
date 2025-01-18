@@ -1,0 +1,43 @@
+<!-- Head and Header -->
+<%- include("header"); -%>
+<head>
+  <link rel="stylesheet" href="/css/rsvp.css">
+</head>
+
+  <div class="rsvp-banner">
+    <h2>RSVP</h2>
+    <div class="rsvp-img">
+      <img src="/images/invitation.png" alt="image of invite">
+    </div>
+  </div>
+
+  <!-- Main -->
+   <main class="rsvp-main">
+    <div class="form-info">
+      <div class="guide">
+        <ul>
+          <li>Please enter your first and last name to RSVP.</li>
+          <li class="middle-li">If you plan on bringing guests, press "Add Guest" and enter their first and last names.</li>
+          <li>Press submit when you have added all the names.</li>
+        </ul>
+      </div>
+      <form action="/rsvp" method="post" class="rsvp">
+        <div id="guest_1" class="guests">
+          <label for="firstName_1">Your name:</label>
+          <input name="firstName_1" id="firstName_1" class="guest_1" autocomplete="off" placeholder="First Name" type="text" required>
+          <input name="lastName_1" id="lastName_1" class="guest_1" autocomplete="off" placeholder="Last Name" type="text" required>
+        </div>
+        <aside class="input-alert">Please fill out fields before adding guest</aside>
+        <div class="guestButtons">
+          <button type="button" name="addGuest" id="addGuest">+ Add Guest</button>
+          <button type="button" name="removeGuest" id="removeGuest"> - Remove Prev.</button>
+        </div>
+      
+        <button name="confirmGuests" id="confirmGuests">Submit</button>
+      </form>
+    </div>
+    
+   </main>
+
+  <!-- Footer -->
+  <%- include("footer"); -%>
