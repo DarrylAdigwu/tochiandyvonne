@@ -35,6 +35,37 @@ server.route("/")
   res.render("index");
 });
 
+// Our story page
+server.route("/our_story")
+.get(async (req, res) => {
+  res.render("our_story");
+});
+
+// Schedule Page
+server.route("/schedule")
+.get(async (req, res) => {
+  res.render("schedule");
+})
+
+// Wedding Party Page
+server.route("/wedding_party")
+.get(async (req, res) => {
+  res.render("wedding_party");
+});
+
+// Gallery Page
+server.route("/gallery")
+.get(async (req, res) => {
+  res.render("gallery");
+});
+
+// Registry Page
+server.route("/registry")
+.get(async (req, res) => {
+  res.render("registry");
+});
+
+
 // Listen for server
 server.listen(process.env.PORT, () => {
   console.log(`Server listening on port ${process.env.PORT}`);

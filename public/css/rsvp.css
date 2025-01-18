@@ -1,0 +1,179 @@
+@media only screen and (min-width: 0px) {
+  .rsvp-banner {
+    position: relative;
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height: 60vh;
+    min-height: 25rem;
+    width: 100vw;
+    background-color: #4d5d53;
+    z-index: -3;
+  }
+
+  .rsvp-banner h2 {
+    position: relative;
+    font-size: 3rem;
+    color: white;
+    text-align: center;
+    font-family: "Playfair";
+    top: 4vh;
+    width: 100%;
+  }
+
+  .rsvp-img {
+    position: relative;
+    width: 4rem;
+    height: 4rem;
+    top: 4vh;
+  }
+
+  .rsvp-banner img {
+    height: 100%;
+    width: 100%;
+  }
+  
+  .rsvp-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    padding: 4rem 2rem;
+  }
+
+  .form-info {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    max-width: 28rem;
+    background-color: #bbbbbb;
+    color: black;
+    border-radius: .75rem;
+    padding: 2rem;
+  }
+
+  form {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 28rem;
+  }
+  
+  .form-info .guide {
+    width: 90%;
+    font-size: .75rem;
+    margin-bottom: 1.5rem;
+    max-width: 26rem;
+  }
+
+  .form-info .guide ul {
+    padding-left: .75rem;
+    margin: 0;
+  }
+
+  .middle-li {
+    margin: .5rem 0;
+  }
+
+  label {
+    width: 100%;
+    text-align: left;
+    margin-bottom: .25rem;
+  }
+
+  input {
+    width: 100%;
+    margin: .25rem 0;
+    padding: .25rem;
+  }
+
+  .input-alert {
+    display: none;
+    margin: 0;
+    padding: 0 .25rem;
+    color: red;
+    font-size: .75rem;
+  }
+
+  .form-info h3 {
+    text-align: center;;
+  }
+
+  .guestButtons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: .75rem;
+    margin-top: .25rem;
+  }
+
+  #addGuest, #removeGuest {
+    background-color: transparent;
+    color: black;
+    text-decoration: underline;
+    border: none;
+  }
+
+  #confirmGuests {
+    margin-top: 1.5rem;
+    background-color: #4d5d53;
+    color: white;
+    border-radius: .25rem;
+    padding: .5rem;
+    width: 100%;
+  }
+
+}
+
+/* Responsive design for 480 width screens */
+@media only screen and (min-width: 480px) {
+  .rsvp-main {
+    padding: 8rem 4rem 4rem 4rem;
+  }
+
+  .form-info {
+    padding: 4rem;
+  }
+}
+
+/* Responsive design for 768 width screens */
+@media only screen and (min-width: 768px) {
+  .rsvp-banner {
+    height: 70vh;
+    min-height: 40rem;
+  }
+
+  .rsvp-banner h2 {
+    font-size: 4rem;
+  }
+
+  .rsvp-img {
+    height: 6rem;
+    width: 6rem;
+  }
+
+  .form-info {
+    padding: 4rem;
+  }
+}
+
+
+/* Responsive design for 920 width screens */
+@media only screen and (min-width: 920px) {
+  .rsvp-banner {
+    height: 100vh;
+    min-height: 40rem;
+  }
+
+  .rsvp-banner h2 {
+    font-size: 5rem;
+  }
+
+  .rsvp-img {
+    height: 6rem;
+    width: 6rem;
+  }
+}

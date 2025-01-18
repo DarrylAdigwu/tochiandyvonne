@@ -1,0 +1,96 @@
+@media only screen and (min-width: 0px) {
+  .gallery-banner {
+    position: relative;
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height: 60vh;
+    min-height: 25rem;
+    width: 100vw;
+    background-color: #4d5d53;
+    z-index: -3;
+  }
+
+  .gallery-banner h2 {
+    position: relative;
+    font-size: 3rem;
+    color: white;
+    text-align: center;
+    font-family: "Playfair";
+    top: 4vh;
+    width: 100%;
+  }
+
+  .gallery-img {
+    position: relative;
+    width: 4rem;
+    height: 4rem;
+    top: 4vh;
+  }
+
+  .gallery-banner img {
+    height: 100%;
+    width: 100%;
+  }
+
+
+  .gallery-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 2rem;
+  }
+
+  .row {
+    margin: 1rem auto;
+  }
+
+  .gallery-pic {
+    width: 100%;
+    border-radius: .75rem;
+  }
+
+}
+
+
+/* Responsive design for tables/ 768 width screens */
+@media only screen and (min-width: 768px) {
+  .gallery-banner {
+    height: 70vh;
+    min-height: 40rem;
+  }
+
+  .gallery-banner h2 {
+    font-size: 5rem;
+  }
+
+  .gallery-img {
+    height: 6rem;
+    width: 6rem;
+  }
+
+  .gallery-main {
+    padding: 8rem 1rem 4rem 1rem;
+  }
+
+}
+
+/* Responsive design for 920px width screens */
+@media only screen and (min-width: 920px) {
+  .gallery-banner {
+    height: 100vh;
+    min-height: 40rem;
+  }
+
+  .gallery-banner h2 {
+    font-size: 5rem;
+  }
+
+  .gallery-img {
+    height: 6rem;
+    width: 6rem;
+  }
+
+}

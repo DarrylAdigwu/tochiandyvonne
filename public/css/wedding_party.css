@@ -1,0 +1,136 @@
+@media only screen and (min-width: 0px) {
+  .party-banner {
+    position: relative;
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 60vh;
+    min-height: 25rem;
+    width: 100vw;
+    background-color: #4d5d53;
+    z-index: -3;
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+
+  .party-banner h2 {
+    position: relative;
+    font-size: 3rem;
+    color: white;
+    text-align: center;
+    font-family: "Playfair";
+    width: 100%;
+    top: 2vh;
+    margin: auto;
+    line-height: 3rem;
+  }
+
+  .party-img {
+    position: absolute;
+    width: 20rem;
+    height: 8rem;
+    bottom: -1rem;
+    right: -2rem;
+  }
+
+  .party-banner img {
+    height: 100%;
+    width: 100%;
+  }
+  
+  .party-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    padding: 4rem 2rem;
+  }
+
+  .container {
+    width: 100vw;
+    font-family: "Playfair";
+  }
+
+  .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .top-col {
+    margin-bottom: 2rem;
+  }
+
+  .row h4 span {
+    font-size: .75rem;
+  }
+
+  hr {
+    display: flex;
+    justify-self: center;
+    width: 60vw;
+    max-width: 60rem;
+  }
+}
+
+
+/* Responsive design for tables/ 768 width screens */
+@media only screen and (min-width: 768px) {
+  .party-banner {
+    height: 70vh;
+    min-height: 40rem;
+  }
+
+  .party-banner h2 {
+    font-size: 4rem;
+    line-height: 4rem;
+  }
+
+  .party-img { 
+    width: 30rem;
+    height: 13rem;
+  }
+
+  .party-main {
+    padding: 8rem 4rem 4rem 4rem;
+  }
+
+  .row div{
+    margin: 1rem 0;
+    max-width: 28rem;
+  }
+
+  .row h4 {
+    font-size: 2rem;
+  }
+
+  .row h4 span {
+    font-size: 1rem;
+  }
+}
+
+/* Responsive design for 920 width screens */
+@media only screen and (min-width: 920px) {
+  .party-banner {
+    height: 100vh;
+    min-height: 40rem;
+  }
+
+  .party-banner h2 {
+    font-size: 5rem;
+    line-height: 5rem;
+  }
+
+  .party-img {
+    width: 32rem;
+    height: 13.5rem;
+  }
+}
+
+/* Responsive design for 1200 width screens */
+@media only screen and (min-width: 1200px) {
+  .party-img {
+    width: 36rem;
+    height: 16rem;
+  }
+}

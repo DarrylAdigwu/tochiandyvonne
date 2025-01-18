@@ -1,0 +1,98 @@
+@media only screen and (min-width: 0px) {
+  .registry-banner {
+    position: relative;
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 60vh;
+    min-height: 25rem;
+    width: 100vw;
+    background-color: #4d5d53;
+    z-index: -3;
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+
+  .registry-banner h2 {
+    position: relative;
+    font-size: 3rem;
+    color: white;
+    text-align: center;
+    font-family: "Playfair";
+    width: 100%;
+    top: 2vh;
+    margin: auto;
+    line-height: 3rem;
+  }
+
+  .registry-img {
+    position: absolute;
+    width: 22rem;
+    height: 8rem;
+    bottom: 0rem;
+    right: -1rem;
+  }
+
+  .registry-banner img {
+    height: 100%;
+    width: 100%;
+  }
+  
+  .registry-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    padding: 4rem 2rem;
+  }
+}
+
+/* Responsive design for 768 width screens */
+@media only screen and (min-width: 768px) {
+  .registry-banner {
+    height: 70vh;
+    min-height: 40rem;
+  }
+
+  .registry-banner h2 {
+    font-size: 4rem;
+    line-height: 4rem;
+  }
+
+  .registry-img { 
+    width: 30rem;
+    height: 13rem;
+  }
+  
+
+  .registry-main {
+    padding: 8rem 4rem 4rem 4rem;
+  }
+}
+
+
+/* Responsive design for 920 width screens */
+@media only screen and (min-width: 920px) {
+  .registry-banner {
+    height: 100vh;
+    min-height: 40rem;
+  }
+
+  .registry-banner h2 {
+    font-size: 5rem;
+    line-height: 5rem;
+  }
+
+  .registry-img {
+    width: 32rem;
+    height: 13.5rem;
+  }
+}
+
+/* Responsive design for 1200 width screens */
+@media only screen and (min-width: 1200px) {
+  .registry-img {
+    width: 36rem;
+    height: 16rem;
+  }
+}

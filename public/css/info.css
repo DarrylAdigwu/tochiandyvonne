@@ -1,0 +1,77 @@
+@media only screen and (min-width: 0px) {
+  .info-banner {
+    position: relative;
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height: 60vh;
+    min-height: 25rem;
+    width: 100vw;
+    background-color: #4d5d53;
+    z-index: -3;
+  }
+
+  .info-banner h2 {
+    position: relative;
+    font-size: 3rem;
+    color: white;
+    text-align: center;
+    font-family: "Playfair";
+    top: 4vh;
+    width: 100%;
+  }
+
+  .info-img {
+    position: relative;
+    width: 4rem;
+    height: 4rem;
+    top: 4vh;
+  }
+
+  .info-banner img {
+    height: 100%;
+    width: 100%;
+  }
+  
+  .info-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    padding: 4rem 2rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .info-banner {
+    height: 70vh;
+    min-height: 40rem;
+  }
+
+  .info-banner h2 {
+    font-size: 5rem;
+  }
+
+  .info-img {
+    height: 6rem;
+    width: 6rem;
+  }
+}
+
+@media only screen and (min-width: 920px) {
+  .info-banner {
+    height: 100vh;
+    min-height: 40rem;
+  }
+
+  .info-banner h2 {
+    font-size: 5rem;
+  }
+
+  .info-img {
+    height: 6rem;
+    width: 6rem;
+  }
+}
