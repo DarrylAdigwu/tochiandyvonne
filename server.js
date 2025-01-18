@@ -28,6 +28,6 @@ server.route("/")
 });
 
 // Listen for server
-server.listen(3000, () => {
+server.listen(process.env.PORT, () => {
   console.log("Server listening on port 3000");
 });
