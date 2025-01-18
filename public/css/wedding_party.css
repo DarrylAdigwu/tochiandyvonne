@@ -47,8 +47,12 @@
   }
 
   .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     width: 100vw;
     font-family: "Playfair";
+    border: 1px solid red;
   }
 
   .row {
@@ -66,6 +70,7 @@
   }
 
   hr {
+    text-align: center;
     display: flex;
     justify-self: center;
     width: 60vw;
