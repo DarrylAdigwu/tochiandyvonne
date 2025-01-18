@@ -2,6 +2,7 @@ import express from 'express';
 import dotenv from 'dotenv';
 import helmet from 'helmet';
 import cors from 'cors';
+import rsvpRouter from './routes/rsvp.js';
 
 // Create Web App
 const server = express();
@@ -65,6 +66,14 @@ server.route("/registry")
   res.render("registry");
 });
 
+// RSVP router
+server.use("/rsvp", rsvpRouter);
+
+// FAQ Page
+server.route("/info")
+.get(async (req, res) => {
+  res.render("info");
+});
 
 // Listen for server
 server.listen(process.env.PORT, () => {
