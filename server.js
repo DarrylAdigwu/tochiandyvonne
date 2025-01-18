@@ -32,7 +32,7 @@ server.use((err, req, res, next) => {
 // Landing Page
 server.route("/")
 .get(async (req, res) => {
-  res.send("index");
+  res.render("index");
 });
 
 // Listen for server
