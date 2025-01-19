@@ -113,7 +113,7 @@
   #addGuest, #removeGuest {
     background-color: #4d5d53;
     color: white;
-    padding: .125rem;
+    padding: .125rem .325rem;
     border-radius: .25rem;
     margin-bottom: 1rem;
   }
