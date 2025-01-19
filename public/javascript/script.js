@@ -142,7 +142,7 @@ function sendData(form) {
       .catch(error => console.log(error));
       
       // Client-side redirect
-      window.location.href = '/rsvp/thank_you';
+      window.location.replace('/rsvp/thank_you');
   })
 
 }

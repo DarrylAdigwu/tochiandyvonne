@@ -154,8 +154,28 @@ html {
     width: 100vw;
   }
 
+  .info div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .trad-ceremony {
+    margin-bottom: .5rem;
+  }
+
+  .wedd-ceremony {
+    margin-top: .5rem;
+  }
+
+  .info div h3{
+    font-size: 1.5rem;
+    font-family: "parisienne";
+  }
+
   .details {
-    font-size: .75rem;
+    font-size: .875rem;
     text-align: center;
   }
   .info h2 {

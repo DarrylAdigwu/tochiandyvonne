@@ -31,6 +31,7 @@ router.route("/")
       await newRSVP(firstname, lastname);
     }
   }
+  res.redirect("/thank_you")
 
 })
 
