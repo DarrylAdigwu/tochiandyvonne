@@ -64,7 +64,7 @@
   
   .form-info .guide {
     width: 90%;
-    font-size: .75rem;
+    font-size: 1rem;
     margin-bottom: 1.5rem;
     max-width: 26rem;
   }
@@ -111,10 +111,11 @@
   }
 
   #addGuest, #removeGuest {
-    background-color: transparent;
-    color: black;
-    text-decoration: underline;
-    border: none;
+    background-color: #4d5d53;
+    color: white;
+    padding: .125rem;
+    border-radius: .25rem;
+    margin-bottom: 1rem;
   }
 
   #confirmGuests {
