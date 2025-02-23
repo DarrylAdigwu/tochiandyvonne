@@ -48,6 +48,12 @@ server.route("/schedule")
   res.render("schedule");
 })
 
+// Hotel Page
+server.route("/hotel")
+.get(async (req, res) => {
+  res.render("hotel");
+})
+
 // Wedding Party Page
 server.route("/wedding_party")
 .get(async (req, res) => {
