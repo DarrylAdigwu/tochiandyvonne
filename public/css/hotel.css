@@ -1,6 +1,7 @@
 @media only screen and (min-width: 0px) {
   header {
     position: relative;
+    background-color: #4d5d53;
   }
   
   .hotel-banner {
@@ -118,6 +119,10 @@
 
 /* Responsive design for 920 width screens */
 @media only screen and (min-width: 920px) {
+  header {
+    background-color: transparent;
+  }
+  
   .navigation li a {
     color: #4d5d53;
   }
