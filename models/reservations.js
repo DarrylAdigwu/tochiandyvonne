@@ -12,6 +12,5 @@ const rsvpSchema = new mongoose.Schema({
   }
 });
 
-const rsvp = mongoose.model("reservations", rsvpSchema);
-
-export default rsvp;
+export const rsvp = mongoose.model("reservations", rsvpSchema);
+export const tradRsvp = mongoose.model("trad_reserve", rsvpSchema)
