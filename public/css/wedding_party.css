@@ -1,36 +1,42 @@
 @media only screen and (min-width: 0px) {
-  .party-banner {
+  header {
     position: relative;
-    display: flex; 
-    flex-wrap: wrap;
+  }
+  
+  .party-banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    height: 60vh;
-    min-height: 25rem;
+    height: calc(60vh - 4rem);
+    min-height: calc(25rem - 4rem);
     width: 100vw;
-    background-color: #4d5d53;
-    z-index: -3;
-    overflow-x: hidden;
-    overflow-y: hidden;
+    border-bottom: 1px solid #4d5d53;
+  }
+
+  .party-banner > img.flowers {
+    width: 50vw;
+    height: 25vw;
+    max-height: 400px;
+    max-width: 800px;
+    min-height: 150px;
+    min-width: 300px;
   }
 
   .party-banner h2 {
     position: relative;
     font-size: 3rem;
-    color: white;
+    color: #4d5d53;
     text-align: center;
     font-family: "Playfair";
     width: 100%;
-    top: 2vh;
-    margin: auto;
-    line-height: 3rem;
+    height: fit-content;
   }
 
   .party-img {
-    position: absolute;
-    width: 20rem;
-    height: 8rem;
-    bottom: -1rem;
-    right: -2rem;
+    position: relative;
+    width: 4rem;
+    height: 4rem;
   }
 
   .party-banner img {
@@ -76,8 +82,8 @@
 /* Responsive design for tables/ 768 width screens */
 @media only screen and (min-width: 768px) {
   .party-banner {
-    height: 70vh;
-    min-height: 40rem;
+    height: calc(70vh - 4rem);
+    min-height: calc(40rem - 4rem);
   }
 
   .party-banner h2 {
@@ -110,8 +116,12 @@
 
 /* Responsive design for 920 width screens */
 @media only screen and (min-width: 920px) {
+  .navigation li a {
+    color: #4d5d53;
+  }
+
   .party-banner {
-    height: 100vh;
+    height: calc(100vh - 10vh);
     min-height: 40rem;
   }
 

@@ -1,33 +1,42 @@
 @media only screen and (min-width: 0px) {
-  .rsvp-banner {
+  header {
     position: relative;
-    display: flex; 
-    flex-wrap: wrap;
-    justify-content: center;
+  }
+  
+  .rsvp-banner {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    align-content: center;
-    height: 60vh;
-    min-height: 25rem;
+    justify-content: center;
+    height: calc(60vh - 4rem);
+    min-height: calc(25rem - 4rem);
     width: 100vw;
-    background-color: #4d5d53;
-    z-index: -3;
+    border-bottom: 1px solid #4d5d53;
   }
 
+  .rsvp-banner > img.flowers {
+    width: 42vw;
+    height: 25vw;
+    max-height: 400px;
+    max-width: 800px;
+    min-height: 150px;
+    min-width: 300px;
+  }
+  
   .rsvp-banner h2 {
     position: relative;
     font-size: 3rem;
-    color: white;
+    color: #4d5d53;
     text-align: center;
     font-family: "Playfair";
-    top: 4vh;
     width: 100%;
+    height: fit-content;
   }
 
   .rsvp-img {
     position: relative;
     width: 4rem;
     height: 4rem;
-    top: 4vh;
   }
 
   .rsvp-banner img {
@@ -47,49 +56,103 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
     width: 100%;
     max-width: 28rem;
-    background-color: #bbbbbb;
     color: black;
     border-radius: .75rem;
+    margin-block: 2rem;
+  }
+
+  .thanks {
+    background-color: #4d5d53;
+    color: #FFFFFF;
     padding: 2rem;
+  }
+
+  .form-info h1 {
+    color: #4d5d53;
+    width: 100%;
+    text-align: center;
+  }
+  
+
+  .form-info h3 {
+    text-align: center;
   }
 
   form {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     width: 100%;
-    max-width: 28rem;
-  }
-  
-  .form-info .guide {
-    width: 90%;
-    font-size: 1rem;
-    margin-bottom: 1.5rem;
-    max-width: 26rem;
+    max-width: 24rem;
   }
 
-  .form-info .guide ul {
+  .radio-buttons  {
+    width: 100%;
+  }
+
+  .radio-buttons > fieldset  {
+    color: #4d5d53;
+    font-size: 1.25rem;
+    font-weight: 700;
+  }
+
+  .radio-buttons label {
+    width: 100%;
+  }
+
+  input.radios {
+    position: relative;
+    left: 0;
+    width: fit-content;
+    margin-right: 1rem;
+    cursor: pointer;
+    accent-color: #4d5d53;
+  }
+
+  .guests, .tradGuests {
+    width: 100%;
+  }
+  
+  .guide {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 90%;
+    font-size: 1rem;
+    max-width: 24rem;
+  }
+  
+  .guide h1 {
+    text-align: center;
+    color: #4d5d53;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  
+  .guide ul {
     padding-left: .75rem;
     margin: 0;
   }
-
+  
   .middle-li {
     margin: .5rem 0;
   }
-
+  
   label {
     width: 100%;
     text-align: left;
     margin-bottom: .25rem;
   }
-
+  
   input {
     width: 100%;
     margin: .25rem 0;
     padding: .25rem;
   }
-
+  
   .input-alert {
     display: none;
     margin: 0;
@@ -98,9 +161,6 @@
     font-size: .75rem;
   }
 
-  .form-info h3 {
-    text-align: center;;
-  }
 
   .guestButtons {
     width: 100%;
@@ -117,6 +177,11 @@
     border-radius: .25rem;
     margin-bottom: 1rem;
   }
+  
+  #addGuest:hover, #removeGuest:hover {
+    background-color: #FFFFFF;
+    color: #4d5d53;
+  }
 
   #confirmGuests {
     margin-top: 1.5rem;
@@ -127,24 +192,28 @@
     width: 100%;
   }
 
+  #confirmGuests:hover{
+    background-color: #FFFFFF;
+    color: #4d5d53;
+  }
+
 }
 
 /* Responsive design for 480 width screens */
 @media only screen and (min-width: 480px) {
   .rsvp-main {
+    display: flex;
+    flex-direction: column;
     padding: 8rem 4rem 4rem 4rem;
   }
 
-  .form-info {
-    padding: 4rem;
-  }
 }
 
 /* Responsive design for 768 width screens */
 @media only screen and (min-width: 768px) {
   .rsvp-banner {
-    height: 70vh;
-    min-height: 40rem;
+    height: calc(70vh - 4rem);
+    min-height: calc(40rem - 4rem);
   }
 
   .rsvp-banner h2 {
@@ -156,16 +225,17 @@
     width: 6rem;
   }
 
-  .form-info {
-    padding: 4rem;
-  }
 }
 
 
 /* Responsive design for 920 width screens */
 @media only screen and (min-width: 920px) {
+  .navigation li a {
+    color: #4d5d53;
+  }
+
   .rsvp-banner {
-    height: 100vh;
+    height: calc(100vh - 10vh);
     min-height: 40rem;
   }
 
@@ -177,4 +247,5 @@
     height: 6rem;
     width: 6rem;
   }
+
 }

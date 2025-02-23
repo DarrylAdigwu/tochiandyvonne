@@ -1,33 +1,42 @@
 @media only screen and (min-width: 0px) {
-  .schedule-banner {
+  header {
     position: relative;
-    display: flex; 
-    flex-wrap: wrap;
-    justify-content: center;
+  }
+  
+  .schedule-banner {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    align-content: center;
-    height: 60vh;
-    min-height: 25rem;
+    justify-content: center;
+    height: calc(60vh - 4rem);
+    min-height: calc(25rem - 4rem);
     width: 100vw;
-    background-color: #4d5d53;
-    z-index: -3;
+    border-bottom: 1px solid #4d5d53;
+  }
+
+  .schedule-banner > img.flowers {
+    width: 55vw;
+    height: 25vw;
+    max-height: 400px;
+    max-width: 800px;
+    min-height: 150px;
+    min-width: 300px;
   }
 
   .schedule-banner h2 {
     position: relative;
     font-size: 3rem;
-    color: white;
+    color: #4d5d53;
     text-align: center;
     font-family: "Playfair";
-    top: 4vh;
     width: 100%;
+    height: fit-content;
   }
 
   .schedule-img {
     position: relative;
     width: 4rem;
     height: 4rem;
-    top: 4vh;
   }
 
   .schedule-banner img {
@@ -94,8 +103,8 @@
 /* Responsive design for 768 width screens */
 @media only screen and (min-width: 768px) {
   .schedule-banner {
-    height: 70vh;
-    min-height: 40rem;
+    height: calc(70vh - 4rem);
+    min-height: calc(40rem - 4rem);
   }
 
   .schedule-banner h2 {
@@ -116,8 +125,13 @@
 
 /* Responsive design for 920 width screens */
 @media only screen and (min-width: 920px) { 
+  .navigation li a {
+    color: #4d5d53;
+  }
+
+
   .schedule-banner {
-    height: 100vh;
+    height: calc(100vh - 10vh);
     min-height: 40rem;
   }
 

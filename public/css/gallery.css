@@ -1,33 +1,42 @@
 @media only screen and (min-width: 0px) {
-  .gallery-banner {
+  header {
     position: relative;
-    display: flex; 
-    flex-wrap: wrap;
-    justify-content: center;
+  }
+  
+  .gallery-banner {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    align-content: center;
-    height: 60vh;
-    min-height: 25rem;
+    justify-content: center;
+    height: calc(60vh - 4rem);
+    min-height: calc(25rem - 4rem);
     width: 100vw;
-    background-color: #4d5d53;
-    z-index: -3;
+    border-bottom: 1px solid #4d5d53;
   }
 
+  .gallery-banner > img.flowers {
+    width: 50vw;
+    height: 25vw;
+    max-height: 400px;
+    max-width: 800px;
+    margin: 0;
+    padding: 0;
+  }
+  
   .gallery-banner h2 {
     position: relative;
     font-size: 3rem;
-    color: white;
+    color: #4d5d53;
     text-align: center;
     font-family: "Playfair";
-    top: 4vh;
     width: 100%;
+    height: fit-content;
   }
 
   .gallery-img {
     position: relative;
-    width: 4rem;
+    width: 5rem;
     height: 4rem;
-    top: 4vh;
   }
 
   .gallery-banner img {
@@ -58,8 +67,8 @@
 /* Responsive design for tables/ 768 width screens */
 @media only screen and (min-width: 768px) {
   .gallery-banner {
-    height: 70vh;
-    min-height: 40rem;
+    height: calc(70vh - 4rem);
+    min-height: calc(40rem - 4rem);
   }
 
   .gallery-banner h2 {
@@ -79,8 +88,12 @@
 
 /* Responsive design for 920px width screens */
 @media only screen and (min-width: 920px) {
+  .navigation li a {
+    color: #4d5d53;
+  }
+
   .gallery-banner {
-    height: 100vh;
+    height: calc(100vh - 10vh);
     min-height: 40rem;
   }
 
@@ -90,7 +103,7 @@
 
   .gallery-img {
     height: 6rem;
-    width: 6rem;
+    width: 7rem;
   }
 
 }

@@ -1,5 +1,6 @@
-html {
+html, body {
   font-size: 16px;
+  overflow-x: hidden;
 }
 
 .parisienne-regular {
@@ -32,7 +33,7 @@ html {
     z-index: -3;
     display: flex;
   }
-
+  
   .banner h2 {
     position: relative;
     font-size: 3rem;
@@ -41,7 +42,7 @@ html {
     top: 4vh;
     font-family: "Parisienne", "Snell Roundhand", "Brush Script MT", cursive;
   }
-
+  
   header {
     position: absolute;
     top: 0;
@@ -51,8 +52,9 @@ html {
     width: 100vw;
     background-color: rgba(0, 0, 0, .25);
     padding: 0 1.5rem;
+    z-index: 100;
   }
-
+  
   header nav {
     display: flex;
     flex-wrap: nowrap;
@@ -61,36 +63,37 @@ html {
     width: 100vw; 
     height: 100%;
   }
-
+  
   .navigation {
     display: none;
   }
-
+  
   header .logo a{
     color: white;
     text-decoration: none;
     font-family: "Parisienne";
   }
-
+  
   .burger {
     width: 2rem;
+    cursor: pointer;
   }
-
+  
   .burger li {
     list-style: none;
     border: 1px solid white;
     margin: .25rem 0;
   }
-
+  
   @keyframes left {
     0% {left: 100vw}
     100% {left: 0}
   }
-
+  
   .off-screen {
     display: none;
   }
-
+  
   .off-screen.active {
     display: flex;
     position: absolute;
@@ -192,21 +195,32 @@ html {
   }
 
   .reserve {
-    width: 100vw;
+    width: 100%;
     display: flex;
     justify-content: center;
-    margin: 1rem 0;
+    margin-top: 3rem;
   }
 
-  .reserve button {
+  .reserve a {
     width: 50%;
     max-width: 10rem;
     height: 4rem;
-    background-color: #4d5d53;
-    color: white;
+    background-color: #FFFFFF;
     box-shadow: none;
-    border: none;
-    margin-top: 2rem;
+    border: 2px solid #4D5D53;
+    border-radius: 5px;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #4D5D53;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+  }
+
+  .reserve a:hover {
+    background-color: #4D5D53;
+    color: white;
   }
 
   .time {
@@ -251,8 +265,8 @@ html {
   }
 
   .off-screen.active {
-    height: 62vh;
-    min-height: calc(70vh - 4rem);
+    height: calc(70vh - 4rem);
+    min-height: 36rem;
   }
 
   .off-screen li {
@@ -266,6 +280,10 @@ html {
 
 /* Responsive design for 920 width screens */
 @media only screen and (min-width: 920px) {
+  * {
+    font-size: 1.125rem;
+  }
+
   .banner {
     height: 100vh;
   }
@@ -277,6 +295,7 @@ html {
   header {
     height: 10vh;
     padding: 0;
+    background-color: transparent;
   }
 
   header nav {
@@ -328,10 +347,6 @@ html {
   .banner {
     background-image: url("/images/arch_stair.jpg");
     min-height: 50rem;
-  }
-  
-  header {
-    background-color: transparent;
   }
 
   header nav {

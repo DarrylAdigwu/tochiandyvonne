@@ -55,7 +55,7 @@ function addGuests(alert, addButton, removeButton) {
       alert.style.display = "none";
     }
     // Event button functionality
-    if(addButton) {
+    if(addButton && i < 2) {
       // Create div
       const newGuestContainer = document.createElement("div");
       newGuestContainer.setAttribute("id", `guest_${i + 1}`);
@@ -73,7 +73,7 @@ function addGuests(alert, addButton, removeButton) {
       firstNameInput.setAttribute("id", `firstName_${i + 1}`);
       firstNameInput.setAttribute("class", `guest_${i + 1}`);
       firstNameInput.setAttribute("placeholder", "First Name");
-      firstNameInput.setAttribute("autocomplete", "off");
+      firstNameInput.setAttribute("autocomplete", "on");
       firstNameInput.setAttribute("type", "text");
       firstNameInput.required = true;
   
@@ -94,7 +94,9 @@ function addGuests(alert, addButton, removeButton) {
       // Place new div after current div
       currentGuestContainer.after(newGuestContainer);
   
-      i++;
+        i++;
+    } else {
+      return null;
     }
   });
 
@@ -112,7 +114,6 @@ function addGuests(alert, addButton, removeButton) {
   });
 
 };
-
 
 
 const form = document.querySelector("form.rsvp");
@@ -137,7 +138,7 @@ function sendData(form) {
       body: JSON.stringify(data)
     }).then(res => res.json())
       .then(data => {
-        console.log(data)
+        return data
       })
       .catch(error => console.log(error));
       
@@ -151,5 +152,7 @@ function sendData(form) {
 // Function calls
 countdown(weddingDay);
 click(burger, off);
+
+
 addGuests(inputAlert, addGuest, removeGuest);
 sendData(form);

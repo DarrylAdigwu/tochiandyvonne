@@ -1,36 +1,36 @@
 @media only screen and (min-width: 0px) {
-  .registry-banner {
+  header {
     position: relative;
-    display: flex; 
-    flex-wrap: wrap;
+  }
+  
+  .registry-banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    height: 60vh;
-    min-height: 25rem;
+    height: calc(60vh - 4rem);
+    min-height: calc(25rem - 4rem);
     width: 100vw;
-    background-color: #4d5d53;
-    z-index: -3;
-    overflow-x: hidden;
-    overflow-y: hidden;
+    border-bottom: 1px solid #4d5d53;
   }
 
+  .registry-banner > img.flowers {
+    width: 50vw;
+    height: 25vw;
+    max-height: 400px;
+    max-width: 800px;
+    min-height: 150px;
+    min-width: 300px;
+  }
+  
   .registry-banner h2 {
     position: relative;
     font-size: 3rem;
-    color: white;
+    color: #4d5d53;
     text-align: center;
     font-family: "Playfair";
     width: 100%;
-    top: 2vh;
-    margin: auto;
-    line-height: 3rem;
-  }
-
-  .registry-img {
-    position: absolute;
-    width: 22rem;
-    height: 8rem;
-    bottom: 0rem;
-    right: -1rem;
+    height: fit-content;
   }
 
   .registry-banner img {
@@ -40,18 +40,57 @@
   
   .registry-main {
     display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100vw;
     padding: 4rem 2rem;
   }
+
+  .registry-main p {
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+  }
+
+  .registry {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+  }
+
+  .registry a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    max-width: 10rem;
+    height: 4rem;
+    background-color: #FFFFFF;
+    box-shadow: none;
+    border: 2px solid #4D5D53;
+    margin-top: 2rem;
+    border-radius: 5px;
+    font-size: 1.125rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: #4D5D53;
+  }
+
+  .registry a:hover {
+    background-color: #4D5D53;
+    color: #FFFFFF;
+  }
+
 }
 
 /* Responsive design for 768 width screens */
 @media only screen and (min-width: 768px) {
   .registry-banner {
-    height: 70vh;
-    min-height: 40rem;
+    height: calc(70vh - 4rem);
+    min-height: calc(40rem - 4rem);
   }
 
   .registry-banner h2 {
@@ -73,8 +112,12 @@
 
 /* Responsive design for 920 width screens */
 @media only screen and (min-width: 920px) {
+  .navigation li a {
+    color: #4d5d53;
+  }
+
   .registry-banner {
-    height: 100vh;
+    height: calc(100vh - 10vh);
     min-height: 40rem;
   }
 

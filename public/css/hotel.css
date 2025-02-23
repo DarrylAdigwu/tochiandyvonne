@@ -1,0 +1,147 @@
+@media only screen and (min-width: 0px) {
+  header {
+    position: relative;
+  }
+  
+  .hotel-banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(60vh - 4rem);
+    min-height: calc(25rem - 4rem);
+    width: 100vw;
+    border-bottom: 1px solid #4d5d53;
+  }
+
+  .hotel-banner > img.flowers {
+    width: 42vw;
+    height: 25vw;
+    max-height: 400px;
+    max-width: 800px;
+    min-height: 150px;
+    min-width: 300px;
+  }
+  
+  .hotel-banner h2 {
+    position: relative;
+    font-size: 3rem;
+    color: #4d5d53;
+    text-align: center;
+    font-family: "Playfair";
+    width: 100%;
+    height: fit-content;
+  }
+
+  .hotel-img {
+    position: relative;
+    width: 5rem;
+    height: 4rem;
+  }
+
+  .hotel-banner img {
+    height: 100%;
+    width: 100%;
+  }
+  
+  .hotel-main {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    padding: 4rem 2rem;
+  }
+
+  .hotel-main p {
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+  }
+
+  .hotel {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+  }
+
+  .hotel a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    max-width: 10rem;
+    height: 4rem;
+    background-color: #FFFFFF;
+    box-shadow: none;
+    border: 2px solid #4D5D53;
+    margin-top: 2rem;
+    border-radius: 5px;
+    font-size: 1.125rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: #4D5D53;
+  }
+
+  .hotel a:hover {
+    background-color: #4D5D53;
+    color: #FFFFFF;
+  }
+
+}
+
+/* Responsive design for 768 width screens */
+@media only screen and (min-width: 768px) {
+  .hotel-banner {
+    height: calc(70vh - 4rem);
+    min-height: calc(40rem - 4rem);
+  }
+
+  .hotel-banner h2 {
+    font-size: 4rem;
+    line-height: 4rem;
+  }
+
+  .hotel-img { 
+    width: 30rem;
+    height: 13rem;
+  }
+  
+
+  .hotel-main {
+    padding: 8rem 4rem 4rem 4rem;
+  }
+}
+
+
+/* Responsive design for 920 width screens */
+@media only screen and (min-width: 920px) {
+  .navigation li a {
+    color: #4d5d53;
+  }
+
+  .hotel-banner {
+    height: calc(100vh - 10vh);
+    min-height: 40rem;
+  }
+
+  .hotel-banner h2 {
+    font-size: 5rem;
+    line-height: 5rem;
+  }
+
+  .hotel-img {
+    width: 32rem;
+    height: 13.5rem;
+  }
+}
+
+/* Responsive design for 1200 width screens */
+@media only screen and (min-width: 1200px) {
+  .hotel-img {
+    width: 36rem;
+    height: 16rem;
+  }
+}
