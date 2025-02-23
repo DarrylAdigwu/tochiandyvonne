@@ -33,13 +33,13 @@
     width: 100%;
     height: fit-content;
   }
-
+  
   .rsvp-img {
     position: relative;
     width: 4rem;
     height: 4rem;
   }
-
+  
   .rsvp-banner img {
     height: 100%;
     width: 100%;
@@ -52,7 +52,7 @@
     width: 100vw;
     padding: 4rem 2rem;
   }
-
+  
   .form-info {
     display: flex;
     flex-wrap: wrap;
@@ -64,31 +64,36 @@
     border-radius: .75rem;
     margin-block: 2rem;
   }
-
+  
   .thanks {
     background-color: #4d5d53;
     color: #FFFFFF;
     padding: 2rem;
   }
-
+  
   .form-info h1 {
     color: #4d5d53;
     width: 100%;
     text-align: center;
   }
   
-
+  
   .form-info h3 {
     text-align: center;
   }
 
+  hr {
+    width: 100%;
+  }
+  
   form {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     width: 100%;
-    max-width: 24rem;
+    max-width: 26rem;
   }
+
 
   .radio-buttons  {
     width: 100%;
