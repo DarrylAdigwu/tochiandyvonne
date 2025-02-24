@@ -53,6 +53,15 @@
     width: 100vw;
     padding: 4rem 2rem;
   }
+
+  .story-container {
+    width: 90%;
+    max-width: 26rem;
+  }
+
+  .story-container h2{
+    color: #4d5d53;
+  }
 }
 
 
