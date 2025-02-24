@@ -6,7 +6,20 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 // Connect to mongodb
-const db = mongoose.connect(process.env.DATABASE_URI)
+const db = await mongoose.connect(process.env.DATABASE_URI)
+async function connectDB() {
+  try {
+    await mongoose.connect(process.env.DATABASE_URI, {
+      useNewUrlParser: true, 
+      useUnifiedTopology: true,
+    })
+  } catch(error) {
+    console.error('Error conncting to MongoDB:', error)
+    process.exit(1)
+  }
+}
+
+connectDB();
 
 // Function to add new RSVP to database
 export async function newRSVP(first_name, last_name) {
