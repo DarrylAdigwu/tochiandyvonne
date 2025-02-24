@@ -116,10 +116,36 @@ function addGuests(alert, addButton, removeButton) {
 };
 
 
-const form = document.querySelector("form.rsvp");
+// Get data and send data to server side
+async function getData(url, data) {
+  try {
+    const response = await fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    });
 
-// Pass new inputs to server side
-function sendData(form) {
+    if(!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`)
+    }
+
+    const responseData = await response.json()
+    return responseData;
+    
+  } catch(error) {
+    console.error("There was an error sending the data:", error)
+    throw error;
+  }
+}
+
+
+// Function to use event listener to send data to server side 
+const form = document.querySelector("form.rsvp");
+const rsvpURL = "/rsvp"
+
+function sendData(form, url) {
   form.addEventListener("submit", (event) => {
     
     // Prevent default action 
@@ -129,30 +155,22 @@ function sendData(form) {
     const formData = new FormData(form);
     const data = Object.fromEntries(formData);
 
-    // Send Data to server side
-    fetch("/rsvp", {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(data)
-    }).then(res => res.json())
-      .then(data => {
-        return data
+    getData(url, data) 
+      .then(result => {
+        console.log("Success:", result)
       })
-      .catch(error => console.log(error));
-      
+      .catch(error => {
+        console.error("Error during data sending:", error)
+      })
+
       // Client-side redirect
       window.location.replace('/rsvp/thank_you');
-  })
-
-}
-
-
-// Function calls
-countdown(weddingDay);
-click(burger, off);
-
-
-addGuests(inputAlert, addGuest, removeGuest);
-sendData(form);
+    })
+  }
+  
+  
+  // Function calls
+  countdown(weddingDay);
+  click(burger, off);
+  addGuests(inputAlert, addGuest, removeGuest);
+  sendData(form, rsvpURL);
