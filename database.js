@@ -1,6 +1,4 @@
-import mongoose from "mongoose";
 import {rsvp, tradRsvp} from "./models/reservations.js";
-import dotenv from 'dotenv';
 
 // Function to add new RSVP to database
 export async function newRSVP(first_name, last_name) {
