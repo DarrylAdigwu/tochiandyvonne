@@ -2,10 +2,26 @@ import express from 'express';
 import dotenv from 'dotenv';
 import helmet from 'helmet';
 import cors from 'cors';
+import mongoose from 'mongoose';
 import rsvpRouter from './routes/rsvp.js';
 
 // Create Web App
 const server = express();
+
+// Configure .env file
+dotenv.config();
+
+// Connect to mongodb
+async function connectDB() {
+  try {
+    await mongoose.connect(process.env.DATABASE_URI)
+  } catch(error) {
+    console.error('Error conncting to MongoDB:', error)
+    process.exit(1)
+  }
+}
+
+connectDB();
 
 // Set view engine for ejs
 server.set("view engine", "ejs");
@@ -20,9 +36,6 @@ server.use(helmet());
 
 //Middleware for cross-origin resources
 server.use(cors())
-
-// Configure .env file
-dotenv.config();
 
 // Global Error Handling
 server.use((err, req, res, next) => {

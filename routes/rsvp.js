@@ -1,5 +1,5 @@
 import express from "express";
-import { newRSVP, newTradRSVP } from "../db/database.js";
+import { newRSVP, newTradRSVP } from "../database.js";
 
 const router = express.Router();
 
