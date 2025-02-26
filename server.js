@@ -2,7 +2,7 @@ import express from 'express';
 import dotenv from 'dotenv';
 import helmet from 'helmet';
 import cors from 'cors';
-import mongoose from 'mongoose';
+//import mongoose from 'mongoose';
 import rsvpRouter from './routes/rsvp.js';
 
 // Create Web App
@@ -12,7 +12,7 @@ const server = express();
 dotenv.config();
 
 // Connect to mongodb
-async function connectDB() {
+/*async function connectDB() {
   try {
     await mongoose.connect(process.env.DATABASE_URI)
   } catch(error) {
@@ -21,7 +21,7 @@ async function connectDB() {
   }
 }
 
-connectDB();
+connectDB();*/
 
 // Set view engine for ejs
 server.set("view engine", "ejs");

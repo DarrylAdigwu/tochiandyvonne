@@ -1,5 +1,5 @@
 import express from "express";
-import { newRSVP, newTradRSVP } from "../database.js";
+//import { newRSVP, newTradRSVP } from "../database.js";
 
 const router = express.Router();
 
@@ -8,7 +8,7 @@ router.route("/")
 .get(async (req, res) => {
   res.render("rsvp");
 })
-.post(async (req, res) =>{
+/*.post(async (req, res) =>{
   const regex = /\W/gi;
   const data = req.body;
   const dataObjLength = (Object.keys(data).length - 1) / 2;
@@ -50,6 +50,6 @@ router.route("/")
 router.route("/thank_you")
 .get(async (req, res) => {
   res.render("thank_you")
-})
+})*/
 
 export default router;
