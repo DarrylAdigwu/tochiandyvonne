@@ -260,6 +260,16 @@ html, body {
       margin-bottom: 3rem;
     }
 
+  div.time > .details {
+    color: red;
+    text-decoration: line-through;
+  }
+
+  div.time > .details.married {
+    color: black;
+    text-decoration: none;
+  }
+
   .countdown {
     color: black;
     text-align: center;

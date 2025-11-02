@@ -4,7 +4,7 @@ const weddingDay = new Date("May 23, 2025 18:00:00");
 function countdown(targetDate) {
   setInterval(() => {
     const now = new Date().getTime();
-    const timeLeft = targetDate.getTime() - now;
+    const timeLeft = now - targetDate.getTime();
 
     const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
     const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
